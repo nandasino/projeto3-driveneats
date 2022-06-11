@@ -59,6 +59,7 @@ body{
     align-items: center;
     overflow-x: scroll;
     margin-top: 10px;
+    margin-right: 10px;
 }
 .opcao{
     width: 172px;
