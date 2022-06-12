@@ -63,15 +63,17 @@ function abrirWhats(){
         const precoBebidaApenasNumero = parseFloat(precoBebidaApenas)
         const precoSobremesaApenasNumero = parseFloat(precoSobremesaApenas)
 
-        const total = precoPratoApenasNumero + precoBebidaApenasNumero + precoSobremesaApenasNumero
+        const total = (precoPratoApenasNumero + precoBebidaApenasNumero + precoSobremesaApenasNumero).toFixed(2);
 
-        let textodecompra = `
+        let mensagem = `
         Olá, gostaria de fazer o pedido:
         - Prato: ${nomePratoApenas}
         - Bebida: ${nomeBebidaApenas}
         - Sobremesa: ${nomeSobremesaApenas}
         Total: R$ ${total}
         `
-        alert(textodecompra)
+        let link = "https://wa.me/5581982707801?text=";
+        let alterarmsg = encodeURIComponent(mensagem);
+        window.open(link + alterarmsg)
     }
 }
