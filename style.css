@@ -114,14 +114,25 @@ body{
     position: fixed;
     bottom: 0;
 }
-button{
+
+.botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 364px;
     height: 61px;
     left: 25px;
     bottom: 16px;
-    background: #CBCBCB;
     border-radius: 50px;
     border: none;
+    background-color: #CBCBCB;
+}
+
+.botao.fechar-pedido{
+    background-color: #32B72F;
+}
+
+.texto-botao{
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
