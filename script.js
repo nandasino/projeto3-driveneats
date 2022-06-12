@@ -43,12 +43,35 @@ function abrirWhats(){
     let checarSobremesas = document.querySelector('.sobremesas .selecionar');
 
     if(checarPratos && checarBebidas && checarSobremesas){
-        const nomePrato = checarPratos.querySelector('.nome')
-        const nomeBebida = checarBebidas.querySelector('.nome')
-        const nomeSobremesa = checarSobremesas.querySelector('.nome')
+        const nomePrato = checarPratos.querySelector('.nome-opcao')
+        const nomeBebida = checarBebidas.querySelector('.nome-opcao')
+        const nomeSobremesa = checarSobremesas.querySelector('.nome-opcao')
 
-        const precoPrato = checarPratos.querySelector('.preco')
-        const precoBebida = checarBebidas.querySelector('.preco')
-        const precoSobremesa = checarSobremesas.querySelector('.preco')
+        const precoPrato = checarPratos.querySelector('.numero')
+        const precoBebida = checarBebidas.querySelector('.numero')
+        const precoSobremesa = checarSobremesas.querySelector('.numero')
+
+        const nomePratoApenas = nomePrato.innerText
+        const nomeBebidaApenas = nomeBebida.innerText
+        const nomeSobremesaApenas = nomeSobremesa.innerText
+
+        const precoPratoApenas = precoPrato.innerText
+        const precoBebidaApenas = precoBebida.innerText
+        const precoSobremesaApenas = precoSobremesa.innerText
+
+        const precoPratoApenasNumero = parseFloat(precoPratoApenas)
+        const precoBebidaApenasNumero = parseFloat(precoBebidaApenas)
+        const precoSobremesaApenasNumero = parseFloat(precoSobremesaApenas)
+
+        const total = precoPratoApenasNumero + precoBebidaApenasNumero + precoSobremesaApenasNumero
+
+        let textodecompra = `
+        Olá, gostaria de fazer o pedido:
+        - Prato: ${nomePratoApenas}
+        - Bebida: ${nomeBebidaApenas}
+        - Sobremesa: ${nomeSobremesaApenas}
+        Total: R$ ${total}
+        `
+        alert(textodecompra)
     }
 }
