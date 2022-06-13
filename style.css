@@ -78,6 +78,8 @@ body{
 }
 .opcao img{
     width: 144px;
+    height: 87px;
+    object-fit: cover;
 }
 .nome-opcao{
     font-style: normal;

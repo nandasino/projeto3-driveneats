@@ -65,7 +65,7 @@ function abrirWhats(){
 
         const total = (precoPratoApenasNumero + precoBebidaApenasNumero + precoSobremesaApenasNumero).toFixed(2);
 
-        let mensagem = `
+        let mensagem =`
         Olá, gostaria de fazer o pedido:
         - Prato: ${nomePratoApenas}
         - Bebida: ${nomeBebidaApenas}
